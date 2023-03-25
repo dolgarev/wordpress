@@ -44,6 +44,9 @@ RUN set -ex; \
 		mysqli \
 		zip \
 	; \
+# https://github.com/phpredis/phpredis/blob/develop/INSTALL.md	
+	pecl install redis; \
+	\
 # https://pecl.php.net/package/imagick
 	pecl install imagick-3.6.0; \
 	docker-php-ext-enable imagick; \
