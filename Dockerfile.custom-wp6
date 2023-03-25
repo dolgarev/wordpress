@@ -46,7 +46,7 @@ RUN set -ex; \
 	; \
 # https://github.com/phpredis/phpredis/blob/develop/INSTALL.md	
 	pecl install redis; \
-	docker-php-ext-enable redis \
+	docker-php-ext-enable redis; \
 	\
 # https://pecl.php.net/package/imagick
 	pecl install imagick-3.6.0; \
