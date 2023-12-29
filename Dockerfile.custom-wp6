@@ -4,7 +4,10 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM php:8.2-apache
+# Unable to load dynamic library 'imagick' and 'zip' in Bookworm based php8.2 and php8.1 images 
+# [https://github.com/docker-library/wordpress/issues/833]
+# FROM php:8.2-apache
+FROM php:8.2-apache-bullseye
 
 # persistent dependencies
 RUN set -eux; \
